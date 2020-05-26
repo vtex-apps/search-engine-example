@@ -1,0 +1,46 @@
+{
+  "vendor": "vtex",
+  "name": "search-engine-example",
+  "version": "0.0.1",
+  "title": "VTEX Search Engine Example",
+  "description": "Learn how to create custom integrations to search engines using VTEX Search Protocol",
+  "credentialType": "absolute",
+  "builders": {
+    "node": "6.x",
+    "docs": "0.x"
+  },
+  "dependencies": {
+    "vtex.messages": "1.x",
+    "vtex.catalog-api-proxy": "0.x",
+    "vtex.search-graphql": "0.x"
+  },
+  "policies": [
+    {
+      "name": "vtex.messages:translate-messages"
+    },
+    {
+      "name": "vtex.catalog-api-proxy:catalog-proxy"
+    },
+    {
+      "name": "vbase-read-write"
+    },
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "/api/segments/*"
+      },
+      "name": "outbound-access"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.customsearchengine.com",
+        "path": "/*"
+      }
+    }
+  ],
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

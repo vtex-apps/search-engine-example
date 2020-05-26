@@ -1,5 +1,5 @@
 import { NotFoundError, UserInputError, createMessagesLoader } from '@vtex/api'
-import { head, isEmpty, isNil, test, pathOr, path } from 'ramda'
+import { head, isEmpty, isNil, test, pathOr } from 'ramda'
 
 import { resolvers as assemblyOptionResolvers } from './assemblyOption'
 import { resolvers as autocompleteResolvers } from './autocomplete'
@@ -466,21 +466,7 @@ export const queries = {
     )
     return getSearchMetaData(_, compatibilityArgs, ctx)
   },
-  topSearches: async (_: any, __: any, ctx: Context) => {
-    return null
-  },
-  searchSuggestions: () => async (
-    _: any,
-    args: SuggestionSearchesArgs,
-    ctx: Context
-  ) => {
-    return null
-  },
-  productSuggestions: async (
-    _: any,
-    args: SuggestionProductsArgs,
-    ctx: Context
-  ) => {
-    return null
-  },
+  topSearches: () => null,
+  searchSuggestions: () => null,
+  productSuggestions:() => null,
 }

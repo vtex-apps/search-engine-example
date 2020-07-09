@@ -1,7 +1,7 @@
 {
   "vendor": "vtex",
   "name": "search-engine-example",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "title": "VTEX Search Engine Example",
   "description": "Learn how to create custom integrations to search engines using VTEX Search Protocol",
   "credentialType": "absolute",
